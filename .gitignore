@@ -9,3 +9,9 @@ Thumbs.db
 # Temp files
 *.tmp
 *.log
+
+# Claude Code
+.claude/
+
+# Hassas config (gerçek değerleri olan kopyayı commit etme)
+# openclaw.json referans dosyası redacted versiyonla commitleniyor

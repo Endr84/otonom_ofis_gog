@@ -32,33 +32,42 @@
 
 - [x] Projenin kapsamı netleştirildi — OpenClaw altyapılı, çok kullanıcılı ofis asistanı
 - [x] Temel özellikler listelendi — multi-agent routing, kanal entegrasyonu, ofis otomasyonu
-- [~] Teknik gereksinimler belirleniyor — OpenClaw araştırması devam ediyor
+- [x] Teknik gereksinimler belirlendi — OpenClaw + gogcli + WhatsApp + OpenRouter
 
 ---
 
 ## AŞAMA 2 — Tasarım & Mimari
 
-- [ ] Sistem mimarisi tasarlandı
-- [ ] Kanal seçimi yapıldı (Slack / Telegram / WhatsApp?)
-- [ ] LLM seçimi yapıldı (maliyet/performans analizi)
-- [ ] Dağıtım platformu seçildi (VPS / Docker / DigitalOcean?)
-- [ ] Mission Control kullanımı kararlaştırıldı
+- [x] Kanal seçimi yapıldı — WhatsApp (birincil)
+- [x] LLM seçimi yapıldı — OpenRouter (openrouter/auto)
+- [x] Dağıtım platformu — Local (`/home/reakto-asistan`)
+- [x] Google entegrasyon stratejisi — gogcli OAuth, service account yok
+- [x] Multi-agent skill stratejisi — `~/.openclaw/skills/` paylaşımlı kurulum
 - [ ] Güvenlik mimarisi tasarlandı
-- [ ] Veri akışı diyagramı oluşturuldu
-- [ ] API / entegrasyon noktaları belirlendi
+- [ ] Mission Control kullanımı kararlaştırıldı
 
 ---
 
 ## AŞAMA 3 — Geliştirme
 
-> _Detaylar netleştikçe görevler eklenecek..._
+### Skill: proje-takip
+- [x] SKILL.md yazıldı
+- [x] `create_project_folder.sh` — Drive klasörü + şablon kopyalama
+- [x] `add_reminder.sh` — Takvim hatırlatması
+- [x] `openclaw.json` güncellendi (GDRIVE_PROJECTS_FOLDER_ID + RUHSAT_TEMPLATE_ID)
+- [x] Skill sunucuya kuruldu ve **ilk test başarılı**
+- [~] Uzun vadeli test devam ediyor — hatalar `brain.md`'ye eklenecek
+
+### Sonraki Skill'ler
+- [ ] Belirlenmedi — kullanıcı ihtiyaçlarına göre eklenecek
 
 ---
 
 ## AŞAMA 4 — Test & Hata Ayıklama
 
-- [ ] Temel fonksiyonlar test edildi
-- [ ] Hata kayıtları `brain.md`'ye eklendi
+- [x] `proje-takip` skill ilk çalıştırma başarılı
+- [~] `gog calendar` — `denyCommands` çakışması izleniyor
+- [ ] Çoklu kullanıcı (multi-agent) testi yapılacak
 
 ---
 

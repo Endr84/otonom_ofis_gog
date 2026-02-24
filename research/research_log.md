@@ -59,6 +59,21 @@
 
 ---
 
+#### Kayıt #006 — proje-takip Skill Geliştirme & Deployment
+- **Konu:** OpenClaw skill oluşturma, gogcli entegrasyonu, multi-agent dağıtım stratejisi
+- **Durum:** `tamamlandı — uzun vadeli test`
+- **Özet:**
+  - `proje-takip` skill'i geliştirildi: "proje" tetikleyici → Drive klasörü + ruhsat şablonu + takvim
+  - Service account yaklaşımı **terk edildi** → gogcli OAuth zaten çalışıyordu
+  - Multi-agent için skill `~/.openclaw/skills/` altına kuruldu (tüm agent'lar paylaşır)
+  - `openclaw.json`'a `skills.entries.proje-takip` bloğu eklendi
+  - `GDRIVE_PROJECTS_FOLDER_ID` ve `RUHSAT_TEMPLATE_ID` konfigüre edildi
+  - İlk test **başarılı**
+- **Dikkat:** `gateway.nodes.denyCommands` içinde `calendar.add` var — gogcli shell komutu etkilenmiyor ama izleniyor
+- **Detay Dosyası:** [skills/proje-takip/SKILL.md](../skills/proje-takip/SKILL.md)
+
+---
+
 ## Konu Bazlı Araştırma Dosyaları
 
 | Dosya | Konu | Tarih |
