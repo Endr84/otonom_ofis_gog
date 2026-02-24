@@ -74,6 +74,21 @@
 
 ---
 
+#### Kayıt #007 — Multi-Agent WhatsApp Mimarisi
+- **Konu:** OpenClaw multi-agent kurulum, agents.list + bindings yapısı, WhatsApp account routing
+- **Durum:** `araştırma tamamlandı — uygulama bekliyor`
+- **Kaynak:** docs.openclaw.ai/concepts/multi-agent
+- **Özet:**
+  - `agents.defaults` yapısı tek-agent içindir; multi-agent için `agents.list` dizisine geçilmeli
+  - Her agent için **ayrı bot WhatsApp numarası** gerekli (`openclaw channels login`)
+  - Routing `bindings[].match.accountId` ile yapılır (peer.id değil)
+  - `channels.whatsapp.accounts` altına her bot hesabı tanımlanır
+  - Workspace'ler oluşturuldu, openclaw.json migration henüz yapılmadı
+  - Dikkat: `agents.defaults` içindeki `model`, `compaction`, `maxConcurrent` ayarları `agents.list` yapısına taşınmalı
+- **Detay Dosyası:** [research/openclaw_multiagent.md](openclaw_multiagent.md)
+
+---
+
 ## Konu Bazlı Araştırma Dosyaları
 
 | Dosya | Konu | Tarih |
@@ -82,6 +97,7 @@
 | [gogcli.md](gogcli.md) | gogcli + gog skill — Google Workspace entegrasyonu | 2026-02-24 |
 | [openclaw_skills.md](openclaw_skills.md) | OpenClaw skill sistemi | 2026-02-24 |
 | [openclaw_memory.md](openclaw_memory.md) | Hafıza & kimlik sistemi, BOOTSTRAP.md sorunu | 2026-02-24 |
+| [openclaw_multiagent.md](openclaw_multiagent.md) | Multi-agent WhatsApp mimarisi, agents.list + bindings | 2026-02-24 |
 
 ---
 

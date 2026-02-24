@@ -43,6 +43,7 @@
 - [x] Dağıtım platformu — Local (`/home/reakto-asistan`)
 - [x] Google entegrasyon stratejisi — gogcli OAuth, service account yok
 - [x] Multi-agent skill stratejisi — `~/.openclaw/skills/` paylaşımlı kurulum
+- [x] Multi-agent mimari netleştirildi — `agents.list` + `bindings` + ayrı bot numarası per agent
 - [ ] Güvenlik mimarisi tasarlandı
 - [ ] Mission Control kullanımı kararlaştırıldı
 
@@ -67,7 +68,9 @@
 
 - [x] `proje-takip` skill ilk çalıştırma başarılı
 - [~] `gog calendar` — `denyCommands` çakışması izleniyor
-- [ ] Çoklu kullanıcı (multi-agent) testi yapılacak
+- [~] Çoklu kullanıcı (multi-agent) — workspace'ler oluşturuldu, openclaw.json geçişi bekliyor
+- [ ] `agents.defaults` → `agents.list` migration testi yapılacak
+- [ ] Her agent için bot WhatsApp numarası temin edilecek ve `channels login` yapılacak
 
 ---
 

@@ -24,6 +24,7 @@
 | 2026-02-24 | **Altyapı: OpenClaw** | Açık kaynak, multi-agent routing desteği, her platforma kurulum imkanı |
 | 2026-02-24 | **Çok kullanıcılı mimari** | OpenClaw'un izole agent/workspace sistemi bu yapıyı destekliyor |
 | 2026-02-24 | **Skill stratejisi: `~/.openclaw/skills/`** | Tüm agent'ların paylaştığı konuma kurulum → bir kez kur, herkes kullanır |
+| 2026-02-24 | **Multi-agent: her agent'a ayrı bot numarası** | `agents.list` + `bindings` + `channels.whatsapp.accounts` yapısı; her çalışan için ayrı SIM/WhatsApp numarası gerekli |
 | 2026-02-24 | **Google auth: gog skill OAuth (service account YOK)** | gogcli zaten OAuth kurulu ve çalışıyor; service account gereksiz karmaşıklık |
 | 2026-02-24 | **İlk skill: `proje-takip`** | WhatsApp'ta "proje" tetikleyiciyle Drive klasörü + ruhsat şablonu + takvim hatırlatması |
 
@@ -52,6 +53,7 @@ Proje boyunca karşılaşılan hatalar ve kalıcı çözümleri burada saklanır
 | Tarih | Hata | Çözüm | Kaynak |
 |-------|------|-------|--------|
 | 2026-02-24 | Skill için service account + Python scripts tasarlandı | gogcli zaten OAuth kuruluyla aynı işi yapıyor; Python kaldırıldı, gogcli bash script'lerine geçildi | proje-takip skill geliştirme |
+| 2026-02-24 | Multi-agent için `agents.defaults` yeterli sanıldı | Doğru yapı `agents.list` + `bindings` + `channels.whatsapp.accounts`; peer routing değil account-based routing | openclaw multi-agent docs |
 
 ---
 

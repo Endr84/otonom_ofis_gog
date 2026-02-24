@@ -14,25 +14,47 @@
     }
   },
   "agents": {
-    "defaults": {
-      "model": {
-        "primary": "openrouter/auto"
-      },
-      "models": {
-        "openrouter/auto": {
-          "alias": "OpenRouter"
+    "list": [
+      {
+        "id": "reakto",
+        "default": true,
+        "workspace": "/home/reakto-asistan/.openclaw/workspace-reakto",
+        "model": {
+          "primary": "openrouter/auto"
+        },
+        "compaction": {
+          "mode": "safeguard"
+        },
+        "maxConcurrent": 4,
+        "subagents": {
+          "maxConcurrent": 8
         }
       },
-      "workspace": "/home/reakto-asistan/.openclaw/workspace",
-      "compaction": {
-        "mode": "safeguard"
-      },
-      "maxConcurrent": 4,
-      "subagents": {
-        "maxConcurrent": 8
+      {
+        "id": "<calisani-id>",
+        "workspace": "/home/reakto-asistan/.openclaw/workspace-<calisani-id>",
+        "model": {
+          "primary": "openrouter/auto"
+        },
+        "compaction": {
+          "mode": "safeguard"
+        },
+        "tools": {
+          "deny": ["write", "edit", "exec"]
+        }
       }
-    }
+    ]
   },
+  "bindings": [
+    {
+      "agentId": "reakto",
+      "match": { "channel": "whatsapp", "accountId": "reakto" }
+    },
+    {
+      "agentId": "<calisani-id>",
+      "match": { "channel": "whatsapp", "accountId": "<calisani-id>" }
+    }
+  ],
   "messages": {
     "ackReactionScope": "group-mentions"
   },
@@ -57,12 +79,11 @@
   },
   "channels": {
     "whatsapp": {
-      "enabled": true,
-      "dmPolicy": "pairing",
-      "selfChatMode": false,
-      "allowFrom": [
-        "+90XXXXXXXXXX"
-      ],
+      "accounts": {
+        "reakto": {},
+        "<calisani-id>": {}
+      },
+      "dmPolicy": "allowlist",
       "groupPolicy": "allowlist",
       "debounceMs": 0,
       "mediaMaxMb": 50
