@@ -30,10 +30,11 @@
 
 | Katman | Teknoloji | Durum |
 |--------|-----------|-------|
-| AI Agent Altyapısı | [OpenClaw](https://github.com/openclaw/openclaw) | Araştırılıyor |
+| AI Agent Altyapısı | [OpenClaw](https://github.com/openclaw/openclaw) | Kurulu — test aşaması |
+| Google Entegrasyonu | [gogcli](https://github.com/steipete/gogcli) + `gog` skill | Kurulu — sorun gideriliyor |
 | LLM | Belirlenmedi (OpenClaw ile uyumlu herhangi biri) | Bekliyor |
-| Mesajlaşma Kanalları | Slack / Telegram / WhatsApp (OpenClaw entegrasyonu) | Bekliyor |
-| Dağıtım | VPS / Docker / DigitalOcean App Platform | Bekliyor |
+| Mesajlaşma Kanalları | WhatsApp (birincil) + SSH/uzak masaüstü | Test aşaması |
+| Dağıtım | Belirlenmedi | Bekliyor |
 | Orkestrasyon | OpenClaw Mission Control (opsiyonel) | Bekliyor |
 
 ---
